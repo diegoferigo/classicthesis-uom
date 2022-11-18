@@ -2,9 +2,8 @@
 % Titlepage
 %*******************************************************
 \begin{titlepage}
-    %\pdfbookmark[1]{\myTitle}{titlepage}
     % if you want the titlepage to be centered, uncomment and fine-tune the line below (KOMA classes environment)
-    \begin{addmargin}[-1cm]{-3cm}
+    \begin{addmargin}[-1cm]{-1cm}
     \begin{center}
         \large
 
@@ -12,23 +11,29 @@
 
         \vfill
 
+        \vspace{2cm}
+
         \begingroup
             \color{CTtitle}\spacedallcaps{\myTitle} \\ \bigskip
         \endgroup
 
-        \spacedlowsmallcaps{\myName}
+        \vspace{3cm}
 
-        \vfill
+        \begingroup
+        \textsc{A thesis submitted to the University of Manchester for the degree of \\ Doctor of Philosophy \\ in the Faculty of Science and Engineering}
+        \endgroup
 
-        \includegraphics[width=6cm]{gfx/TFZsuperellipse_bw} \\ \medskip
+        \vspace{4cm}
+        \spacedallcaps{2022}
+        \vspace{4cm}
 
-        \mySubtitle \\ \medskip
-        %\myDegree \\
-        %\myDepartment \\
-        %\myFaculty \\
-        %\myUni \\ \bigskip
+        \spacedallcaps{\myName}
 
-        \myTime\ -- \myVersion
+        \begingroup
+        \vspace{0.5cm}
+        \small
+        \spacedallcaps{Department of Computer Science}
+        \endgroup
 
         \vfill
 

@@ -177,8 +177,13 @@
      \ifthenelse{\boolean{ct@palatino}}% default
        {
        % default: Palatino
-         \PassOptionsToPackage{osf,sc}{mathpazo}%
-         \RequirePackage{mathpazo} % Palatino with real small caps and old style figures
+         % Uncomment the two lines below to enable the default mathpazo font...
+         % \PassOptionsToPackage{osf,sc}{mathpazo}%
+         % \RequirePackage{mathpazo} % Palatino with real small caps and old style figures
+         % ... anc comment the three lines below.
+         \RequirePackage{amsmath}
+         \RequirePackage{amssymb}
+         \RequirePackage{newpxtext}
          \linespread{1.05} % a bit more for Palatino
        }{\relax}
 
@@ -244,10 +249,13 @@
 \ifthenelse{\equal{\ct@paper}{a4}}%
     {% A4 210mm x 297mm
             \PackageInfo{classicthesis}{A4 paper, Palatino or other}
-            \areaset[current]{336pt}{750pt} % ~ 336 * factor 2 + 33 head + 42 \the\footskip
+            % Original area:
+            % \areaset[current]{336pt}{750pt} % ~ 336 * factor 2 + 33 head + 42 \the\footskip
             % \areaset{336pt}{761pt} % 686 (factor 2.2) + 33 head + 42 head \the\footskip 10pt
+            % Enlarged area:
+            \areaset[current]{370pt}{730pt}
             \setlength{\marginparwidth}{7em}%
-            \setlength{\marginparsep}{2em}%
+            \setlength{\marginparsep}{1em}%
     }{\relax}
 
 % Here are some suggestions for the text widths and heights:

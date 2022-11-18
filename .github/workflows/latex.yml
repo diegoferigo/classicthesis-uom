@@ -21,7 +21,7 @@ jobs:
           sudo apt-get install -y --no-install-recommends texlive-full latexmk
 
       - name: Compile document
-        run: latexmk -pdf ClassicThesis
+        run: latexmk -pdf thesis
 
       - name: Inspect folder
         run: ls -lah .
@@ -29,7 +29,7 @@ jobs:
       - name: Upload PDF
         uses: actions/upload-artifact@v3
         with:
-          path: ClassicThesis.pdf
+          path: thesis.pdf
           name: document
 
   release_pdf:
@@ -51,6 +51,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: ClassicThesis.pdf
+          files: thesis.pdf
           draft: true
           generate_release_notes: true
