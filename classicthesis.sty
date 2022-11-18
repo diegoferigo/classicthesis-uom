@@ -177,8 +177,13 @@
      \ifthenelse{\boolean{ct@palatino}}% default
        {
        % default: Palatino
-         \PassOptionsToPackage{osf,sc}{mathpazo}%
-         \RequirePackage{mathpazo} % Palatino with real small caps and old style figures
+         % Uncomment the two lines below to enable the default mathpazo font...
+         % \PassOptionsToPackage{osf,sc}{mathpazo}%
+         % \RequirePackage{mathpazo} % Palatino with real small caps and old style figures
+         % ... anc comment the three lines below.
+         \RequirePackage{amsmath}
+         \RequirePackage{amssymb}
+         \RequirePackage{newpxtext}
          \linespread{1.05} % a bit more for Palatino
        }{\relax}
 
