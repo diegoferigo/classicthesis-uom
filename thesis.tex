@@ -48,6 +48,10 @@
     fontsize=11pt
     ]{scrreprt}
 
+% Fix TOC layout in TeX Live 2022
+% https://tex.stackexchange.com/a/654221
+\PassOptionsToPackage{nopatch}{microtype}
+
 %********************************************************************
 % Note: Make all your adjustments in here
 %*******************************************************
@@ -70,7 +74,7 @@
 \begin{document}
 \frenchspacing
 \raggedbottom
-\selectlanguage{american} % american ngerman
+\selectlanguage{british} % american, ngerman, etc
 %\renewcommand*{\bibname}{new name}
 %\setbibpreamble{}
 %\pagenumbering{roman}
