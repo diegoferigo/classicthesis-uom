@@ -41,17 +41,6 @@
   style=arsclassica % classicthesis, arsclassica
 }{classicthesis}
 
-% Better rendering of long chapter titles
-% https://tex.stackexchange.com/questions/102070/multiline-title-vertical-alignment-using-classicthesis-and-arsclassica
-\newcommand\formatchapter[1]{% 
-  \begin{minipage}[b]{0.15\linewidth}
-    \chapterNumber
-  \end{minipage}%
-  \begin{minipage}[b]{0.8\linewidth}
-    \raggedright\spacedallcaps{#1}
-  \end{minipage}
-}
-
 % ****************************************************************************************************
 % 2. Personal data and user ad-hoc commands (insert your own data here)
 % ****************************************************************************************************
@@ -180,6 +169,16 @@
 % ********************************************************************
 \usepackage{classicthesis}
 
+% Better rendering of long chapter titles
+% https://tex.stackexchange.com/questions/102070/multiline-title-vertical-alignment-using-classicthesis-and-arsclassica
+\renewcommand\formatchapter[1]{% 
+  \begin{minipage}[b]{0.15\linewidth}
+    \chapterNumber
+  \end{minipage}%
+  \begin{minipage}[b]{0.8\linewidth}
+    \raggedright\spacedallcaps{#1}
+  \end{minipage}
+}
 
 % ********************************************************************
 % Fine-tune hyperreferences (hyperref should be called last)
